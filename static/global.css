@@ -1,16 +1,32 @@
+/* リセットCSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 共通設定 */
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+/* カラーパレットの設定 */
+:root {
+	--primary-main: #27374d;
+	--primary-light: #526d82;
+	--secondary-main: #9db2bf;
+	--secondary-light: #dde6ed;
+}
+
 /* Light Theme */
 :root {
-	--bg-color: #27374d;
-	--text-color: #dde6ed;
+	--bg-color: var(--secondary-light);
+	--text-color: var(--primary-light);
 }
 
 /* Dark Theme */
 [data-theme='dark'] {
-	--bg-color: #27374d;
-	--text-color: #dde6ed;
-}
-
-body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
+	--bg-color: var(--primary-main);
+	--text-color: var(--secondary-main);
 }

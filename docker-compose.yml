@@ -1,18 +1,19 @@
 version: '3'
 
 volumes:
-  sveltekit-app-node-modules:
+  word-wolf-node-modules:
+
 
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: sveltekit-app
+    container_name: word-wolf
     working_dir: /app
     tty: true
     volumes:
       - ./:/app
-      - sveltekit-app-node-modules:/app/node_modules
+      - word-wolf-node-modules:/app/node_modules
     ports:
       - 5173:5173

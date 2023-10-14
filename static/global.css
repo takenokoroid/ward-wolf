@@ -1,0 +1,16 @@
+/* Light Theme */
+:root {
+	--bg-color: #27374d;
+	--text-color: #dde6ed;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+	--bg-color: #27374d;
+	--text-color: #dde6ed;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}

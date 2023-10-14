@@ -6,7 +6,12 @@
 	"onCreateCommand": "chmod +x .devcontainer/setup.sh && ./.devcontainer/setup.sh ${containerWorkspaceFolder}",
 	"customizations": {
 		"vscode": {
-			"extensions": ["GitHub.copilot-chat", "GitHub.copilot", "mhutchie.git-graph"]
+			"extensions": [
+				"GitHub.copilot-chat",
+				"GitHub.copilot",
+				"mhutchie.git-graph",
+				"svelte.svelte-vscode"
+			]
 		}
 	}
 }

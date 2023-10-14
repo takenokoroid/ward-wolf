@@ -1,3 +1,5 @@
+import type { Data } from '$lib/repository/data';
+
 const choseWord = (wordList: string[]): string => {
 	if (wordList.length === 0) {
 		throw new Error('wordList is empty');
@@ -13,7 +15,23 @@ const choseNonDuplicatedWords = (wordList: string[], word: string): string => {
 	return word;
 };
 
+const generateWordListWithTheme = (themeList: string[], data: Data[]): string[] => {
+	if (themeList.length === 0) {
+		throw new Error('themeList is empty');
+	}
+	let wordList: string[] = [];
+	for (let i = 0; i < themeList.length; i++) {
+		for (let j = 0; j < data.length; j++) {
+			if (data[j].theme === themeList[i]) {
+				wordList = wordList.concat(data[j].words);
+			}
+		}
+	}
+	return wordList;
+};
+
 export const wordWolf = {
 	choseWord,
-	choseNonDuplicatedWords
+	choseNonDuplicatedWords,
+	generateWordListWithTheme
 };

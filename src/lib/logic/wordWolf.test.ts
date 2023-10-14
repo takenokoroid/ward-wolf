@@ -43,3 +43,42 @@ describe('choseNonDuplicatedWords', () => {
 	// 	vi.restoreAllMocks();
 	// });
 });
+
+describe('generateWordListWithTheme', () => {
+	it('themeListにthemeが存在しない場合', () => {
+		const sampleThemeList = ['fruit', 'animal', 'food'];
+		const sampleData = [
+			{
+				theme: 'another theme...',
+				words: ['apple', 'banana', 'cherry']
+			}
+		];
+		const result = wordWolf.generateWordListWithTheme(sampleThemeList, sampleData);
+		expect(result).toEqual([]);
+	});
+
+	it('themeListにthemeが存在した場合', () => {
+		const sampleThemeList = ['fruit', 'animal', 'food'];
+		const sampleData = [
+			{
+				theme: 'fruit',
+				words: ['apple', 'banana', 'cherry']
+			}
+		];
+		const result = wordWolf.generateWordListWithTheme(sampleThemeList, sampleData);
+		expect(result).toEqual(sampleData[0].words);
+	});
+
+	it('themeListが空の場合', () => {
+		const sampleThemeList: string[] = [];
+		const sampleData = [
+			{
+				theme: 'fruit',
+				words: ['apple', 'banana', 'cherry']
+			}
+		];
+		expect(() => wordWolf.generateWordListWithTheme(sampleThemeList, sampleData)).toThrowError(
+			'themeList is empty'
+		);
+	});
+});

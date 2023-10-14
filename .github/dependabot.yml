@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # 他のパッケージマネージャやディレクトリの設定も可能
+  - package-ecosystem: "pnpm"
+    directory: "/"
+    schedule:
+      interval: "weekly"

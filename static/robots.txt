@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# この設定では、すべてのウェブロボットがウェブサイトの任意のページやリソースにアクセスできることを許可しています。
+User-agent: *
+Disallow:

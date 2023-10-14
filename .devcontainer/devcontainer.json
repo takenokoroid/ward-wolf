@@ -1,0 +1,12 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+	"service": "web",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"onCreateCommand": "chmod +x .devcontainer/setup.sh && ./.devcontainer/setup.sh ${containerWorkspaceFolder}",
+	"customizations": {
+		"vscode": {
+			"extensions": ["GitHub.copilot-chat", "GitHub.copilot", "mhutchie.git-graph"]
+		}
+	}
+}

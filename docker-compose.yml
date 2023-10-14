@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  sveltekit-app-node-modules:
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: sveltekit-app
+    working_dir: /app
+    tty: true
+    volumes:
+      - ./:/app
+      - sveltekit-app-node-modules:/app/node_modules
+    ports:
+      - 5173:5173

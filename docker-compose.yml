@@ -3,7 +3,6 @@ version: '3'
 volumes:
   word-wolf-node-modules:
 
-
 services:
   web:
     build:

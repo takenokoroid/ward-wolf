@@ -72,12 +72,12 @@
 		<div>
 			{$hands[index]}
 		</div>
-		<button on:click={inc}>次の人の単語</button>
+		<button on:click={inc}>次へ</button>
 	{:else}
 		{#each $hands as hand, index}
 			<div>{'player' + (index + 1)} {hand}</div>
 		{/each}
-		<button on:click={reset}>答え</button>
+		<button on:click={reset}>TOPへ</button>
 	{/if}
 </div>
 

@@ -26,8 +26,14 @@
 		for (let i = 0; i < player; i++) {
 			hands.update((hands) => [...hands, nonDuplicatedWord]);
 		}
-		const index = Math.floor(Math.random() * $hands.length);
-		$hands[index] = word;
+		for (let i = 0; i < wolf; i++) {
+			const index = Math.floor(Math.random() * $hands.length);
+			if ($hands[index] === word) {
+				i--;
+				continue;
+			}
+			$hands[index] = word;
+		}
 	};
 
 	const inc = () => {

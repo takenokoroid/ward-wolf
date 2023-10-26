@@ -12,6 +12,7 @@
 		/* 中央寄せ */
 		display: flex;
 		justify-content: center;
+
 		/*余白*/
 		padding: 1rem;
 	}
